@@ -4,32 +4,29 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <ScrollView Padding="8">
-        <Grid RowDefinitions="300,*" RowSpacing="8">
-            <Frame>
-                <CollectionView x:Name="CvListFontFamily" SelectionMode="Single">
-                    <CollectionView.ItemsLayout>
-                        <GridItemsLayout
-                            HorizontalItemSpacing="4"
-                            Orientation="Vertical"
-                            Span="{OnIdiom Default='4',
-                                           Phone='1'}"
-                            VerticalItemSpacing="4" />
-                    </CollectionView.ItemsLayout>
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate x:DataType="x:String">
-                            <Border Style="{StaticResource ItemBorder}">
-                                <Label Text="{Binding .}" />
-                            </Border>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </Frame>
-            <Editor
-                x:Name="EdTextSample"
-                Grid.Row="1"
-                Text="Lorem ipsum dolor sit amet tempor vero kasd at magna nulla. Soluta eos blandit vulputate lorem augue autem accumsan amet dolor. Eros no ea elitr nonummy.  Ad accusam eos et sea eirmod consetetur labore aliquyam nam. Dolore at elit magna voluptua est delenit et diam et ut ut elitr dolor magna iriure takimata dolor eros. Nulla tempor labore dolore tempor sea justo kasd nulla hendrerit rebum sadipscing diam lorem.  Sed aliquyam molestie. Clita ut clita et nonumy ad magna invidunt voluptua kasd eirmod nonummy duis. Labore esse ut dolore sadipscing rebum consequat dolores elitr ipsum est voluptua dolor ipsum stet. Lobortis sit dolores magna et no dolore eum takimata odio voluptua et hendrerit tempor. Ipsum aliquyam ea ipsum sed no in ipsum facilisi vero. Ad elitr justo nisl. Quis eos ut takimata ullamcorper facilisis magna sea erat placerat labore at et stet. Sed velit sed dignissim amet magna. Dolor erat vero no sed ipsum diam delenit eos et laoreet invidunt dolore duis invidunt elit amet. Illum aliquam sed eirmod dolor invidunt rebum clita vero ea vulputate. Gubergren exerci et adipiscing et vero aliquyam et justo clita tempor eu duo at ipsum dignissim diam. Elitr sadipscing dolor dolor aliquyam nulla elitr stet magna no stet no erat at diam erat. Ea rebum consectetuer facer adipiscing amet aliquyam est et velit eros et vulputate amet. Aliquyam praesent eos adipiscing voluptua tempor sed. Esse tincidunt iriure est accusam sea vel stet sea eos labore nonumy et eos ut." />
-        </Grid>
-    </ScrollView>
+    <Grid RowDefinitions="300,*">
+        <Frame Margin="8,0" Padding="8">
+            <CollectionView x:Name="CvListFontFamily" SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
+                        HorizontalItemSpacing="4"
+                        Orientation="Vertical"
+                        Span="{OnIdiom Default='4',
+                                       Phone='1'}"
+                        VerticalItemSpacing="4" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="x:String">
+                        <Border Style="{StaticResource ItemBorder}">
+                            <Label Text="{Binding .}" />
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Frame>
+        <ScrollView Grid.Row="1" Padding="8">
+            <Editor x:Name="EdTextSample" Text="Lorem ipsum dolor sit amet tempor vero kasd at magna nulla. Soluta eos blandit vulputate lorem augue autem accumsan amet dolor. Eros no ea elitr nonummy.  Ad accusam eos et sea eirmod consetetur labore aliquyam nam. Dolore at elit magna voluptua est delenit et diam et ut ut elitr dolor magna iriure takimata dolor eros. Nulla tempor labore dolore tempor sea justo kasd nulla hendrerit rebum sadipscing diam lorem.  Sed aliquyam molestie. Clita ut clita et nonumy ad magna invidunt voluptua kasd eirmod nonummy duis. Labore esse ut dolore sadipscing rebum consequat dolores elitr ipsum est voluptua dolor ipsum stet. Lobortis sit dolores magna et no dolore eum takimata odio voluptua et hendrerit tempor. Ipsum aliquyam ea ipsum sed no in ipsum facilisi vero. Ad elitr justo nisl. Quis eos ut takimata ullamcorper facilisis magna sea erat placerat labore at et stet. Sed velit sed dignissim amet magna. Dolor erat vero no sed ipsum diam delenit eos et laoreet invidunt dolore duis invidunt elit amet. Illum aliquam sed eirmod dolor invidunt rebum clita vero ea vulputate. Gubergren exerci et adipiscing et vero aliquyam et justo clita tempor eu duo at ipsum dignissim diam. Elitr sadipscing dolor dolor aliquyam nulla elitr stet magna no stet no erat at diam erat. Ea rebum consectetuer facer adipiscing amet aliquyam est et velit eros et vulputate amet. Aliquyam praesent eos adipiscing voluptua tempor sed. Esse tincidunt iriure est accusam sea vel stet sea eos labore nonumy et eos ut." />
+        </ScrollView>
+    </Grid>
 
 </ContentPage>
